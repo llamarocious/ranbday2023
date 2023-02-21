@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>hbd yang</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/hollow-heart.png">
+  </head>
+  <body>
+    <header>
+      <h1>to: ran</h1>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#letter">Love Letter</a></li>
+          <li><a href="#playlist">Playlist</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Home Section -->
+    <section id="home">
+      <h1>Happy 21st Birthday</h1>
+      <p>met ultah, yang! <br> ur old</p>
+    </section>
+    
+    <!-- Letter Section -->
+    <section id="letter">
+      <h3> <3 </h3>
+        <div class="container">
+          <h1 id="headline">countdown before ur bday ends</h1>
+          <div id="countdown">
+            <ul>
+              <li><span id="hours"></span>Hours</li>
+              <li><span id="minutes"></span>Minutes</li>
+              <li><span id="seconds"></span>Seconds</li>
+            </ul>
+          </div>
+          <div id="content" class="emoji">
+            <span>🥳</span>
+            <span>🎉</span>
+            <span>🎂</span>
+          </div>
+        </div>
+        <div id="image-container">
+          <!-- <img src="hollow-heart.png" id="blurred-image" alt="Blurred Image">
+          <form id="password-form">
+            <label for="password">Enter Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit" id="submit-btn">Submit</button>
+          </form> -->
+        </div>
+        
+    </section>
+    
+    <!-- Playlist Section -->
+    <section id="playlist">
+      <h2 class="playlist">playlist.</h2>
+      <button onclick="window.open('https://open.spotify.com/playlist/1mLOdKpw0EwgM6sGjOTkcT?si=a5dadd5e66a24a59'), '_blank';"   class="spotify-button">spotify</button>
+        <li>1. Ikaw Pa Rin</li>
+        <p class="desc">the song title translates to "it's still you.", talks about how loving someone can be the cause of longing, and sleepless nights. the things you're willing to do to get their attention, despite the uncertainty of them ending up with you. and doing it all over again just for them. <br> ive said this before, when i first started liking u, i wasn't expecting anything in return. it was ok... until it wasn't :')</p>
+        <p class="desc2"> <br> fave line: <br> Kahit na araw-araw nang nasasaktan, ikaw pa rin ang hahanapin.<br> (Even though I get hurt every day, you're still the one I'll look for.) </p>
+        <li>...will be updated :[ sorry baby ive been busy</li>
+        <!-- Add more songs as needed -->
+      </ul>
+    </section>
+    <div id="countdown"></div>
+    <script>
+      // Set the date to countdown to
+      var countDownDate = new Date("Feb 22, 2023 23:00:00").getTime();
+
+      // Update the countdown every second
+      var x = setInterval(function() {
+
+        // Get the current date and time
+        var now = new Date().getTime();
+
+        // Calculate the time remaining
+        var timeRemaining = countDownDate - now;
+
+        // Calculate days, hours, minutes, and seconds
+        var days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+        // Display the countdown in the #countdown element
+        document.getElementById("countdown").innerHTML = hours + "h " + minutes + "m " + seconds + "s ";
+
+        // If the countdown is over, show a message
+        if (timeRemaining < 0) {
+          clearInterval(x);
+          document.getElementById("countdown").innerHTML = "EXPIRED";
+        }
+      }, 1000);
+    </script>
+
+
+    <script>
+      /* const blurredImage = document.getElementById("blurred-image");
+      const passwordForm = document.getElementById("password-form");
+      const submitBtn = document.getElementById("submit-btn");
+
+      blurredImage.addEventListener("click", function() {
+        passwordForm.style.display = "block";
+      });
+
+      submitBtn.addEventListener("click", function(event) {
+        event.preventDefault();
+        const password = document.getElementById("password").value;
+        if (password === "your-password") {
+          blurredImage.src = "/hollow-heart.png";
+          passwordForm.style.display = "none";
+        } else {
+          alert("Incorrect password. Please try again.");
+        }
+      }); */
+
+    </script>
+  </body>
+  <footer>
+    <p>&copy; 2023 to: ran</p>
+  </footer>
+</html>
